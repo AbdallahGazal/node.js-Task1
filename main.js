@@ -177,10 +177,10 @@
 
 /*
 * forEach: runs its iterations asynchronously, which means that all iterations start running at the same time
-        *if you break in an iteration, only that iteration stops
-        *I would use it if next iterations don't depend on the previous ones, or if I don't need later iterations to be delayed
+        *you can't break out of forEach loop, because it accepts a callback function and runs it for each element in the array
+        *I would use it if there is asynchronous code in the callback function and I don't want to wait for the previous iteration to finish before starting the next one
 * for of: runs normally in a synchronous way, if I break the whole loop stops
-        *I would use it if next iterations depend on the previous
+        *I would use it if next iterations depend on the previous and I want the next iteration to wait for the previous one to finish before starting
 */
 
 // ? 2. What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples.
